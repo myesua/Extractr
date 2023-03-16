@@ -4,6 +4,7 @@
   "description": "An utility for extracting texts from image files",
   "main": "index.js",
   "scripts": {
+    "build": "npm build",
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
