@@ -11,11 +11,11 @@ app.disable('x-powered-by'); //Reduce fingerprinting
 app.get('/favico.ico', (req, res) => {
   res.sendStatus(404);
 });
-app.use(express.static(path.join(__dirname, 'views')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(fileUpload());
 app.get('/', (req, res) => {
   try {
-    res.sendFile('index.html', { root: 'v1/views' });
+    res.sendFile('index.html', { root: 'public' });
   } catch (err) {
     res.status(500).json({
       status: 'error',
